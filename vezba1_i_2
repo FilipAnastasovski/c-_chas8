@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chas_8_vezba1
+{
+
+
+    public class Song
+    {
+        public string Title { get; set; }
+        public int Length { get; set; }
+        public Genre Tip { get; set; }
+
+    }
+
+    public class Person
+    {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
+        public Genre FavMusic { get; set; }
+
+        List<Song> FavSong { get; set; }
+
+        public void GetFavSong()
+        {
+            foreach(var item in FavSong)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+    }
+
+    public enum Genre
+    {
+        Rock,
+        Hip_Hop,
+        Techno,
+        Classical
+
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Dictionary<string, long> phoneBook = new Dictionary<string, long>();
+            //phoneBook.Add("potato", 030434095);
+            //phoneBook.Add("tomato", 0567789980);
+            //phoneBook.Add("bob", 035467);
+            //phoneBook.Add("kevin", 0789789);
+            //phoneBook.Add("andrea", 0789789);
+
+            //while (true)
+            //{
+
+            //    Console.WriteLine("koj go barate?");
+            //    string personInput = Console.ReadLine();
+
+            //    //Console.WriteLine(phoneBook.ContainsKey(personInput));
+
+            //    if (phoneBook.ContainsKey(personInput))
+            //    {
+            //        foreach (var item in phoneBook)
+            //        {
+            //            if (personInput == item.Key)
+            //            {
+            //                Console.WriteLine("0" + item.Value);
+            //            }
+            //        }
+            //    }
+            //    else { Console.WriteLine("no such person"); }
+
+
+
+            Console.ReadLine();
+        }
+    }
+    }
